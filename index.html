@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            text-decoration: none;
+            padding: 0;
+
+        }
+
+
+
+        .main {
+            width: 1280px;
+            height: 100vh;
+            background-image: url(imgs/header.jpg);
+            background-size: cover;
+            position: fixed;
+        }
+
+        .black {
+            width: 100%;
+            height: 700px;
+            background-color: black;
+            opacity: 0.7;
+            position: relative;
+            position: fixed;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+
+        }
+
+        .header {
+            width: 93%;
+            height: 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: auto;
+
+        }
+
+        .header i {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .intro {
+            width: 40%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        .intro h3 {
+            color: #ffffff;
+            margin-left: 50px;
+            font-size: 35px;
+            margin-top: 200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .intro h1 {
+            color: #ffffff;
+            font-size: 90px;
+            margin-left: 50px;
+            margin-top: -40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .intro h4 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-left: 50px;
+            margin-top: -50px;
+            font-weight: 300;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .banner button {
+            width: 140px;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(245, 46, 109);
+            margin-left: 50px;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 100%;
+            height: 6000px;
+            background-color: white;
+            margin-top: 150px;
+        }
+
+        .head {
+            width: 100%;
+            height: 50px;
+            background-color: #ffffff;
+            box-shadow: 0px 2px 5px 0px rgb(165, 163, 163);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: auto;
+
+
+        }
+
+        .left {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .left a {
+            color: rgb(0, 0, 0);
+            font-size: 17px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .middle {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dp {
+            width: 60%;
+            height: 170px;
+            border-radius: 50%;
+            border: 10px solid white;
+            box-shadow: 0px 0px 5px 0px gray;
+            justify-content: center;
+            display: flex;
+            z-index: 999;
+
+        }
+
+        .dp img {
+            border-radius: 50%;
+            width: 100%;
+        }
+
+        .right {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .right a {
+            color: rgb(0, 0, 0);
+            font-size: 17px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .about {
+            width: 100%;
+            height: 430px;
+            background-color: aquamarine;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .about1 {
+            width: 33%;
+            height: 100%;
+            background-color: white;
+            border: 1px solid rgb(219, 216, 216);
+            box-sizing: border-box;
+            border-top: none;
+        }
+
+        .about1 h2 {
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 50px;
+            font-weight: 300;
+            margin-top: 80px;
+        }
+
+        hr {
+            width: 30px;
+            color: rgb(228, 19, 89);
+            height: 1px;
+            background-color: rgb(225, 28, 94);
+            border: none;
+            margin-top: -20px;
+            margin-left: 50px;
+        }
+
+        .about h3 {
+            font-size: 22px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 50px;
+            font-weight: 300;
+            color: rgb(65, 64, 64);
+            margin-top: 50px;
+        }
+
+        .about p {
+            font-size: 14px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 50px;
+            font-weight: 300;
+            color: gray;
+        }
+
+        .about1 .btn {
+            width: 140px;
+            height: 35px;
+            border: none;
+            border: 1px solid rgb(211, 38, 67);
+            color: rgb(231, 51, 81);
+            border-radius: 5px;
+            background-color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .about2 {
+            width: 33%;
+            height: 100%;
+            background-color: white;
+            border: 1px solid rgb(219, 216, 216);
+            box-sizing: border-box;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+
+        }
+
+        .about2 h2 {
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 50px;
+            font-weight: 300;
+            margin-top: 80px;
+        }
+
+        .about2 h3 {
+            font-size: 14px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 50px;
+            font-weight: 300;
+        }
+
+        .about2 h4 {
+            font-size: 14px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 50px;
+            font-weight: 300;
+
+        }
+
+        .about2 span {
+            color: gray;
+        }
+
+        .social {
+            width: 83%;
+            height: 30px;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .social i {
+            margin-left: 20px;
+        }
+
+        .about3 {
+            width: 34%;
+            height: 100%;
+            background-color: white;
+            border: 1px solid rgb(219, 216, 216);
+            box-sizing: border-box;
+            border-top: none;
+        }
+
+        .about3 h2 {
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 50px;
+            font-weight: 300;
+            margin-top: 80px;
+        }
+
+        .web {
+            width: 80%;
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+
+        .logo {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .border {
+            width: 55%;
+            height: 60%;
+            border: 2px dotted rgb(232, 36, 101);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+        }
+
+        .text h3 {
+            margin: 0;
+            color: black;
+            font-size: 17px;
+        }
+
+        .text p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .design {
+            width: 80%;
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 25px;
+            margin-left: 40px;
+        }
+
+        .marketing {
+            width: 80%;
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 25px;
+            margin-left: 40px;
+        }
+
+        /* skills part start*/
+
+        .skills {
+            width: 92%;
+            height: 650px;
+            margin: auto;
+            margin-top: 80px;
+        }
+
+        .skills h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+        }
+
+        .skills span {
+            color: #f01456;
+        }
+
+        .three {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .one {
+            width: 30%;
+            height: 100%;
+            border: 1px solid gainsboro;
+        }
+
+        .one hr {
+            margin-left: 20px;
+            margin-top: -16px;
+            width: 25px;
+        }
+
+        .one h2 {
+            margin-left: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+        }
+
+        .one h4 {
+            margin-left: 20px;
+            font-size: 20px;
+            color: #ec0e45;
+            font-weight: 500;
+            margin-top: 20px;
+
+
+        }
+
+        .one h5 {
+            margin-left: 20px;
+            font-size: 12px;
+            color: #4e4d4d;
+            font-weight: 500;
+            margin-top: -10px;
+
+        }
+
+        .one .para {
+            width: 100%;
+        }
+
+        .one p {
+            margin-left: 15px;
+            padding: 5px;
+            color: #878585;
+        }
+
+        .para hr {
+            width: 305px;
+            background-color: #d9d6d6;
+            margin-top: 3px;
+            height: 2px;
+
+        }
+
+        .one h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            color: gray;
+            margin-left: 20px;
+        }
+
+        .fill {
+            width: 90%;
+            height: 5px;
+            background-color: #e5e2e2;
+            margin: auto;
+        }
+
+        .inner1 {
+            width: 90%;
+            height: 100%;
+            background-color: #ec0e45;
+        }
+
+        .inner2 {
+            width: 75%;
+            height: 100%;
+            background-color: #ec0e45;
+        }
+
+        .inner3 {
+            width: 80%;
+            height: 100%;
+            background-color: #ec0e45;
+        }
+
+        .inner4 {
+            width: 95%;
+            height: 100%;
+            background-color: #ec0e45;
+        }
+
+        .inner5 {
+            width: 70%;
+            height: 100%;
+            background-color: #ec0e45;
+        }
+
+        .language {
+            width: 100%;
+            height: 50%;
+            margin: auto;
+            border-top: 1px solid rgb(217, 214, 214);
+            margin-top: 20px;
+
+
+        }
+
+
+
+
+        /* loader  CSS
+
+        :root {
+                --progress-bar-width: 100px;
+                --progress-bar-height: 200px;
+                --font-size: 2rem;
+            }
+
+            body {
+                height: 100vh;
+                background-color: #100c08;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                place-items: center;
+                gap: 2rem;
+            }
+
+            .circular-progress {
+                width: var(--progress-bar-width);
+                height: var(--progress-bar-height);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .inner-circle {
+                position: absolute;
+                width: calc(var(--progress-bar-width) - 30px);
+                height: calc(var(--progress-bar-height) - 30px);
+                border-radius: 50%;
+                background-color: lightgrey;
+            }
+
+            .percentage {
+                position: relative;
+                font-size: var(--font-size);
+                color: rgb(0, 0, 0, 0.8);
+            }
+
+            @media screen and (max-width: 800px) {
+                :root {
+                    --progress-bar-width: 150px;
+                    --progress-bar-height: 150px;
+                    --font-size: 1.3rem;
+                }
+            }
+
+            @media screen and (max-width: 500px) {
+                :root {
+                    --progress-bar-width: 120px;
+                    --progress-bar-height: 120px;
+                    --font-size: 1rem;
+                }
+            }
+            .load{
+                display: flex;
+                width: 90%;
+                margin-top: 50px;
+                justify-content: space-evenly;
+                align-items: center;
+            } */
+
+
+        .work {
+            width: 100%;
+            height: 270px;
+            background-color: #38383b;
+            margin-top: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .work img {
+            width: 90px;
+            margin-right: 10px;
+        }
+
+        .two {
+            width: 25%;
+            height: 60%;
+            border-left: 1px solid gray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .two h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #e5e2e2;
+            font-weight: 300;
+            font-size: 15px;
+        }
+
+        .two span {
+            color: #ec0e45;
+            font-size: 50px;
+        }
+
+        .twotwo {
+            width: 25%;
+            height: 60%;
+            border-left: 1px solid gray;
+            border-right: 1px solid gray;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .twotwo h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #e5e2e2;
+            font-weight: 300;
+            font-size: 15px;
+        }
+
+        .twotwo span {
+            color: #ec0e45;
+            font-size: 50px;
+        }
+
+        .work h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #e5e2e2;
+            font-weight: 300;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        .work span {
+            color: #ec0e45;
+            font-size: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .service h1 {
+            font-size: 35px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+            margin-top: 80px;
+        }
+
+        .service span {
+            color: #ec0e45;
+            margin-left: 50px;
+        }
+
+        .contain2 {
+            width: 92%;
+            margin: auto;
+            height: 650px;
+            margin-top: 40px;
+
+        }
+
+        .top {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .top1 {
+            width: 30%;
+            height: 80%;
+            border: 1px solid rgb(207, 202, 202);
+        }
+
+        .top1 .node {
+            width: 50px;
+            position: absolute;
+            top: 5px;
+            left: 30px;
+            border-radius: 40%;
+            background-color: #fefefe;
+        }
+
+        .top1 .note {
+            width: 50px;
+            position: absolute;
+            top: 8px;
+            left: 38%;
+            border-radius: 40%;
+            background-color: #fefefe;
+        }
+
+        .top1 .code {
+            width: 50px;
+            position: absolute;
+            top: 5px;
+            right: 23%;
+            border-radius: 40%;
+            background-color: #fefefe;
+        }
+
+        .top1 h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+            font-size: 23px;
+            margin-left: 10px;
+            margin-top: 50px;
+        }
+
+        .top1 p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            margin-left: 10px;
+            color: #878585;
+        }
+
+        .btm {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .btm1 {
+            width: 30%;
+            height: 80%;
+            border: 1px solid rgb(210, 208, 208);
+        }
+
+        .btm1 .map {
+            width: 50px;
+            position: absolute;
+            top: 5px;
+            left: 30px;
+            border-radius: 40%;
+            background-color: #fefefe;
+        }
+
+        .btm1 .group {
+            width: 50px;
+            position: absolute;
+            top: 8px;
+            left: 38%;
+            border-radius: 40%;
+            background-color: #fefefe;
+        }
+
+        .btm1 .med {
+            width: 50px;
+            position: absolute;
+            top: 5px;
+            right: 23%;
+            border-radius: 40%;
+            background-color: #fefefe;
+        }
+
+        .btm1 h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+            font-size: 23px;
+            margin-left: 10px;
+            margin-top: 50px;
+        }
+
+        .btm1 p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            margin-left: 10px;
+            color: #878585;
+        }
+
+        .contain3 {
+            width: 93%;
+            margin: auto;
+            height: 600px;
+        }
+
+        .contain3 h1 {
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+            margin-top: 50px;
+        }
+
+        .contain3 span {
+            color: #ec0e45;
+        }
+
+        .three {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .long {
+            width: 20%;
+            height: 90%;
+            border: 1px solid gray;
+        }
+
+        .spcl {
+            width: 20%;
+            height: 100%;
+            border: 1px solid gray;
+        }
+
+        .long h2 {
+            font-size: 30px;
+            color: #878585;
+            text-align: center;
+        }
+
+        .long h1 {
+            font-size: 55px;
+            text-align: center;
+            position: relative;
+        }
+
+        sup {
+            font-size: 20px;
+            position: absolute;
+            right: 160px;
+
+        }
+
+        sub {
+            font-size: 15px;
+
+        }
+
+        .long h4 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100;
+            text-align: center;
+        }
+
+        .spcl button {}
+
+        .spcl h2 {
+            margin-top: 48px;
+        }
+
+
+        .freelance {
+            width: 100%;
+            background-color: rgb(44, 45, 45);
+            margin: auto;
+            text-align: center;
+        }
+
+        .freelance h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 400;
+            font-size: 35px;
+            color: #e5e2e2;
+            padding-top: 40px;
+        }
+
+        .freelance button {
+            margin: 25px;
+        }
+
+        .container4 {
+            width: 93%;
+            margin: auto;
+        }
+
+        .container4 h1 {
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+            margin-top: 50px;
+        }
+
+        .container4 span {
+            color: #ec0e45;
+            margin-right: 10px;
+
+        }
+
+        .menus {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu2 {
+            width: 30%;
+            height: 35px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-bottom: 2px solid rgb(225, 222, 222);
+        }
+
+        .menu2 a {
+            color: rgb(46, 42, 42);
+            cursor: pointer;
+            transition: 0.3s;
+
+        }
+
+        .menu2 span {
+            background-color: #ea3361;
+            padding: 7px;
+            border-radius: 5px;
+            color: #fdfdfd;
+        }
+
+        .photos {
+            width: 100%;
+            height: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .pic1{
+            width: 32.5%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pic11{
+            width: 100%;
+            height: 61%;
+        }
+        .pic1 img{
+            width: 100%;
+            height: 100%;
+        }
+        .pic12{
+            width: 100%;
+            height: 37%;
+        }
+        .pic21{
+            width: 100%;
+            height: 32%;
+        }
+        .pic22{
+            width: 100%;
+            height: 32%;
+        }
+        .pic23{
+            width: 100%;
+            height: 32%;
+        }
+        .pic31{
+            width: 100%;
+            height: 30%;
+        }
+        .pic32{
+            width: 100%;
+            height: 31%;
+        }
+        .pic33{
+            width: 100%;
+            height: 35%;
+        }
+        .contain5{
+            width: 93%;
+            height: 800px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        .contain5 h1{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 300;
+            font-size: 40px;
+        }
+        .contain5 span{
+            color: #f01456;
+        }
+        .news{
+            width: 100%;
+            height: 320px;
+            margin-top: 20px;
+            display: flex;
+        }
+        .book{
+            width: 30%;
+            height: 100%;
+            background-color: #4e4d4d;
+        }
+        .book img{
+            width: 100%;
+            height: 100%;
+        }
+        .blog{
+            width: 70%;
+            height: 100%;
+            border: 1px solid rgb(193, 192, 192);
+            box-sizing: border-box;
+            border-left: none;
+
+        }
+        .blog h3{
+            font-size: 25px;
+            color: #212020;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100;
+            margin-left: 20px;
+        }
+        .blog h4{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100;
+            color: #f01456;
+            margin-left: 20px;
+            font-size: 13px;
+
+        }
+        .blog h5{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 14px;
+            margin-left: 20px;
+            
+        }
+        .blog h6{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #a3a0a0;
+            margin-left: 20px;
+        }
+        .blog p{
+            margin-left: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100;
+            color: #878585;
+        }
+    
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="main"></div>
+    <div class="black"></div>
+    <div class="banner">
+        <div class="header">
+            <i class="fa-brands fa-facebook-f" style="color: #ffffff; font-size: 20px;"></i>
+            <i class="fa-brands fa-x-twitter" style="color: #ffffff; font-size: 20px;"></i>
+            <i class="fa-brands fa-google-plus-g fa-lg" style="color: #ffffff; font-size: 20px;"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff; font-size: 20px;"></i>
+        </div>
+        <div class="intro">
+            <h3>Hello, I am</h3>
+            <h1>John Doe</h1>
+            <h4>Front end Designer | Developer</h4>
+            <button>Print Resume</button>
+        </div>
+        <div class="container">
+            <div class="head">
+                <div class="left">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Resume</a>
+                </div>
+                <div class="middle">
+                    <div class="dp">
+                        <img src="imgs/avatar.jpg">
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="#">Portfolio</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="about">
+                <div class="about1">
+                    <h2>Who am I ?</h2>
+                    <hr>
+                    <h3>A Web Designer / Developer<br>
+                        Located in Our Lovely Earth</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Blanditiis, maxime enim id
+                        possimus.<br> Sunt rem in cupiditate officia dolor</p>
+                    <button class="btn">Download My CV</button>
+                </div>
+                <div class="about2">
+                    <h2>Personal Info</h2>
+                    <hr>
+                    <h3>Email : <span>Fitness44freak@gmail.com</span></h3>
+                    <h4>Phone : <span>+ 91-7849959782</span></h4>
+                    <h4>Skype : <span>Abhishek_pra</span></h4>
+                    <h4>Address : <span>Near Ganesh Temple, Ward no.10, Sardarshahar</span></h4>
+                    <div class="social">
+                        <i class="fa-brands fa-facebook-f" style="color: rgb(241, 42, 108); font-size: 20px;"></i>
+                        <i class="fa-brands fa-x-twitter" style="color: rgb(241, 42, 108); font-size: 20px;"></i>
+                        <i class="fa-brands fa-google-plus-g fa-lg"
+                            style="color: rgb(241, 42, 108); font-size: 20px;"></i>
+                        <i class="fa-brands fa-instagram" style="color: rgb(241, 42, 108); font-size: 20px;"></i>
+                    </div>
+                </div>
+                <div class="about3">
+                    <h2>My Expertise</h2>
+                    <hr>
+                    <div class="web">
+                        <div class="logo">
+                            <div class="border"><i class="fa-solid fa-code"
+                                    style="color: #f01456; font-size: 20px;"></i></div>
+                        </div>
+                        <div class="text">
+                            <h3>Web Development</h3>
+                            <p>Excellent Creativity and workholic</p>
+                        </div>
+                    </div>
+                    <div class="design">
+                        <div class="logo">
+                            <div class="border"><i class="fa-solid fa-chart-line"
+                                    style="color: #f01944; font-size: 20px;"></i></div>
+                        </div>
+                        <div class="text">
+                            <h3>UX Design</h3>
+                            <p>Excellent Creativity and workholic
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="marketing">
+                        <div class="logo">
+                            <div class="border"><i class="fa-solid fa-globe"
+                                    style="color: #ec0e45; font-size: 20px;"></i></i></div>
+                        </div>
+                        <div class="text">
+                            <h3>Digital Marketing</h3>
+                            <p>Excellent Creativity and workholic</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="skills">
+                <h1><Span>My</Span> Resume</h1>
+                <div class="three">
+                    <div class="one">
+                        <h2>Expertise</h2>
+                        <hr>
+                        <h4>2017 - Present</h4>
+                        <h5>UX Developer</h5>
+                        <div class="para">
+                            <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Incidunt praesentium
+                                <br>laboriosam explicabo distinctio<br> itaque exercitationem veniam eaque
+                            </p>
+                            <hr>
+                        </div>
+
+                        <h4>2016 - 2017</h4>
+                        <h5>Front - End Developer</h5>
+                        <div class="para">
+                            <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Incidunt praesentium
+                                <br>laboriosam explicabo distinctio<br> itaque exercitationem veniam eaque
+                            </p>
+                            <hr>
+                        </div>
+
+                        <h4>2015 - 2016</h4>
+                        <h5>UX Designer</h5>
+                        <div class="para">
+                            <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Incidunt praesentium
+                                <br>laboriosam explicabo distinctio<br> itaque exercitationem veniam eaque
+                            </p>
+                        </div>
+
+
+                    </div>
+                    <div class="one">
+                        <h2>Education</h2>
+                        <hr>
+                        <h4>2017 - Present</h4>
+                        <h5>B.E. Computer Engineering</h5>
+                        <div class="para">
+                            <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Incidunt praesentium
+                                <br>laboriosam explicabo distinctio<br> itaque exercitationem veniam eaque
+                            </p>
+                            <hr>
+                        </div>
+
+                        <h4>2016 - 2017</h4>
+                        <h5>Diploma in Computer Engineering</h5>
+                        <div class="para">
+                            <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Incidunt praesentium
+                                <br>laboriosam explicabo distinctio<br> itaque exercitationem veniam eaque
+                            </p>
+                            <hr>
+                        </div>
+
+                        <h4>2015 - 2016</h4>
+                        <h5>High School Degree</h5>
+                        <div class="para">
+                            <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Incidunt praesentium
+                                <br>laboriosam explicabo distinctio<br> itaque exercitationem veniam eaque
+                            </p>
+                        </div>
+                    </div>
+                    <div class="one">
+                        <h2>Skills</h2>
+                        <hr>
+                        <h3>HTML5 & CSS3</h3>
+                        <div class="fill">
+                            <div class="inner1"></div>
+                        </div>
+
+
+                        <h3>JAVA Script</h3>
+                        <div class="fill">
+                            <div class="inner2"></div>
+                        </div>
+
+
+                        <h3>Python</h3>
+                        <div class="fill">
+                            <div class="inner3"></div>
+                        </div>
+
+
+                        <h3>Django</h3>
+                        <div class="fill">
+                            <div class="inner4"></div>
+                        </div>
+
+
+
+                        <h3>MySQL</h3>
+                        <div class="fill">
+                            <div class="inner5"></div>
+                        </div>
+
+                        <div class="language">
+                            <h2>Languages</h2>
+                            <hr>
+                            <h3>English</h3>
+                            <div class="fill">
+                                <div class="inner1"></div>
+                            </div>
+
+
+                            <h3>German</h3>
+                            <div class="fill">
+                                <div class="inner2"></div>
+                            </div>
+
+
+                            <h3>French</h3>
+                            <div class="fill">
+                                <div class="inner3"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- <div class="load">
+                <div class="circular-progress" data-inner-circle-color="lightgrey" data-percentage="80"
+                    data-progress-color="crimson" data-bg-color="black">
+                    <div class="inner-circle"></div>
+                    <p class="percentage">0%</p>
+                </div>
+
+                <div class="circular-progress" data-inner-circle-color="white" data-percentage="70"
+                    data-progress-color="rebeccapurple" data-bg-color="violet">
+                    <div class="inner-circle"></div>
+                    <p class="percentage">0%</p>
+                </div>
+
+                <div class="circular-progress" data-inner-circle-color="lime" data-percentage="100"
+                    data-progress-color="green" data-bg-color="lightgrey">
+                    <div class="inner-circle"></div>
+                    <p class="percentage">0%</p>
+                </div>
+
+                <div class="circular-progress" data-inner-circle-color="cyan" data-percentage="60"
+                    data-progress-color="blue" data-bg-color="skyblue">
+                    <div class="inner-circle"></div>
+                    <p class="percentage">0%</p>
+                </div>
+
+                <div class="circular-progress" data-inner-circle-color="black" data-percentage="90"
+                    data-progress-color="red" data-bg-color="grey">
+                    <div class="inner-circle"></div>
+                    <p class="percentage">0%</p>
+                </div>
+                <script>
+                    const circularProgress = document.querySelectorAll(".circular-progress");
+
+                    Array.from(circularProgress).forEach((progressBar) => {
+                        const progressValue = progressBar.querySelector(".percentage");
+                        const innerCircle = progressBar.querySelector(".inner-circle");
+                        let startValue = 0,
+                            endValue = Number(progressBar.getAttribute("data-percentage")),
+                            speed = 20,
+                            progressColor = progressBar.getAttribute("data-progress-color");
+
+                        const progress = setInterval(() => {
+                            startValue++;
+                            progressValue.textContent = `${startValue}%`;
+                            progressValue.style.color = `${progressColor}`;
+
+                            innerCircle.style.backgroundColor = `${progressBar.getAttribute(
+                                "data-inner-circle-color"
+                            )}`;
+
+                            progressBar.style.background = `conic-gradient(${progressColor} ${startValue * 3.6
+                                }deg,${progressBar.getAttribute("data-bg-color")} 0deg)`;
+                            if (startValue === endValue) {
+                                clearInterval(progress);
+                            }
+                        }, speed);
+                    });
+                </script>
+                </div> -->
+
+            </div>
+            <div class="work">
+                <img src="imgs/alarm_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg">
+                <div class="two">
+                    <h1><span>500</span><br>Hours Worked</h1>
+                    <img src="imgs/layers_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg">
+                </div>
+                <div class="two">
+                    <h1><span>50k</span><br>Project finished</h1>
+                    <img src="imgs/sentiment_satisfied_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg">
+                </div>
+                <div class="twotwo">
+                    <h1><span>200k</span><br>Happy Clients</h1>
+                    <img src="imgs/cardiology_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg">
+                </div>
+                <h1><span>2k</span><br>Coffee Drinked</h1>
+            </div>
+            <div class="service">
+                <h1><span>My</span> Service</h1>
+                <div class="contain2">
+                    <div class="top">
+                        <div class="top1">
+                            <img class="node" src="imgs/network_node_24dp_EE1742_FILL0_wght400_GRAD0_opsz24.svg">
+                            <h2>Ullam</h2>
+                            <p>Lorem ipsum dolor consectetur, adipisicing elit. Nobis ducimus, nulla
+                                repudiandae similique, excepturi aperiam, commodi tenetur voluptatem labore
+                                assumenda ad iure aliquid tempore eum quod. Deleniti. Lorem ipsum, dolor amet
+                                consectetur adipisicing elit. Deserunt incidunt praesentium voluptas, blanditiis vero,
+                                eaque quo totam voluptatum rem accusamus saepe tenetur.</p>
+                        </div>
+                        <div class="top1">
+                            <img class="note" src="imgs/edit_note_24dp_EE1742_FILL0_wght400_GRAD0_opsz24.svg">
+
+                            <h2>Asperiore</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ducimus, nulla
+                                repudiandae cum similique, excepturi aperiam, alias id commodi tenetur voluptatem labore
+                                assumenda ad iure aliquid tempore eum quod. Deleniti. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Deserunt incidunt praesentium voluptas, blanditiis vero,
+                                eaque quo totam voluptatum rem accusamus saepe tenetur.</p>
+                        </div>
+                        <div class="top1">
+                            <img class="code" src="imgs/deployed_code_24dp_EE1742_FILL0_wght400_GRAD0_opsz24.svg">
+
+                            <h2>Tempora</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ducimus, nulla
+                                repudiandae cum similique, excepturi aperiam, alias id commodi tenetur voluptatem labore
+                                assumenda ad iure aliquid tempore eum quod. Deleniti. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Deserunt incidunt praesentium voluptas, blanditiis vero,
+                                eaque quo totam voluptatum rem accusamus saepe tenetur.</p>
+                        </div>
+                    </div>
+                    <div class="btm">
+                        <div class="btm1">
+                            <img class="map" src="imgs/map_24dp_EE1742_FILL0_wght400_GRAD0_opsz24.svg">
+
+                            <h2>Provident</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ducimus, nulla
+                                repudiandae cum similique, excepturi aperiam, alias id commodi tenetur voluptatem labore
+                                assumenda ad iure aliquid tempore eum quod. Deleniti. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Deserunt incidunt praesentium voluptas, blanditiis vero,
+                                eaque quo totam voluptatum rem accusamus saepe tenetur.</p>
+                        </div>
+                        <div class="btm1">
+                            <img class="group" src="imgs/grouped_bar_chart_24dp_EE1742_FILL0_wght400_GRAD0_opsz24.svg">
+
+                            <h2>Consectetur</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ducimus, nulla
+                                repudiandae cum similique, excepturi aperiam, alias id commodi tenetur voluptatem labore
+                                assumenda ad iure aliquid tempore eum quod. Deleniti. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Deserunt incidunt praesentium voluptas, blanditiis vero,
+                                eaque quo totam voluptatum rem accusamus saepe tenetur.</p>
+                        </div>
+                        <div class="btm1">
+                            <img class="med" src="imgs/medical_services_24dp_EE1742_FILL0_wght400_GRAD0_opsz24.svg">
+
+                            <h2>Veritatis</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis ducimus, nulla
+                                repudiandae cum similique, excepturi aperiam, alias id commodi tenetur voluptatem labore
+                                assumenda ad iure aliquid tempore eum quod. Deleniti. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Deserunt incidunt praesentium voluptas, blanditiis vero,
+                                eaque quo totam voluptatum rem accusamus saepe tenetur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contain3">
+                <h1><span>Packs</span> Pricing</h1>
+                <div class="three">
+                    <div class="long">
+                        <h2>Free</h2>
+                        <h1><sup>$</sup>00<sub>/MO</sub></h1>
+                        <h4>5 Project</h4>
+                        <h4>1GB Storage</h4>
+                        <h4>No Domain</h4>
+                        <h4>1 User</h4>
+                        <button>Subscribe</button>
+
+                    </div>
+                    <div class="long">
+                        <h2>Basic</h2>
+                        <h1><sup>$</sup>10<sub>/MO</sub></h1>
+                        <h4>50 Project</h4>
+                        <h4>10GB Storage</h4>
+                        <h4>1 Domain</h4>
+                        <h4>5 User</h4>
+                        <button>Subscribe</button>
+                    </div>
+                    <div class="long spcl">
+                        <h2>Exclusive</h2>
+                        <h1><sup>$</sup>25<sub>/MO</sub></h1>
+                        <h4>150 Project</h4>
+                        <h4>15GB Storage</h4>
+                        <h4>5 Domain</h4>
+                        <h4>15 User</h4>
+                        <button>Subscribe</button>
+                    </div>
+                    <div class="long">
+                        <h2>Pro</h2>
+                        <h1><sup>$</sup>99<sub>/MO</sub></h1>
+                        <h4>500 Project</h4>
+                        <h4>1000GB Storage</h4>
+                        <h4>10 Domain</h4>
+                        <h4>Unlimited User</h4>
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="freelance">
+                <h2>I Am Available For Freelance</h2>
+                <button>Hire Me</button>
+            </div>
+            <div class="container4">
+                <h1><span>My</span>Portfolio</h1>
+                <div class="menus">
+                    <div class="menu2">
+                        <a href="#"><Span>New</Span></a>
+                        <a href="#">Advertising</a>
+                        <a href="#">Branding</a>
+                        <a href="#">Web</a>
+                    </div>
+                </div>
+                <div class="photos">
+                    <div class="pic1">
+                        <div class="pic11">
+                            <img src="imgs/web-1.jpg">
+                        </div>
+                        <div class="pic12">
+                            <img src="imgs/branding-1.jpg">
+                        </div>
+                    </div>
+                    <div class="pic1">
+                        <div class="pic21">
+                            <img src="imgs/web-2.jpg">
+                        </div>
+                        <div class="pic22">
+                            <img src="imgs/advertising-3.jpg">
+                        </div>
+                        <div class="pic23">
+                            <img src="imgs/branding-3.jpg">
+                        </div>
+                    </div>
+                    <div class="pic1">
+                        <div class="pic31">
+                            <img src="imgs/advertising-2.jpg">
+                        </div>
+                        <div class="pic32">
+                            <img src="imgs/web-3.jpg">
+                        </div>
+                        <div class="pic33">
+                            <img src="imgs/advertising-4.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contain5">
+                <h1>Latest<span> News</span></h1>
+                <div class="news">
+                    <div class="book">
+                        <img src="imgs/blog1.jpg">
+                    </div>
+                    <div class="blog">
+                        <h3>Consectetur adipisicing elit</h3>
+                        <h6>By: Admin</h6>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eum eos nisi quia recusandae! Eveniet<br> repudiandae praesentium esse, rerum sunt autem fugiat vero doloribus quia ab consequuntur temporibus</p>
+                        <h5>Deleniti temporibus optio perspiciatis. Assumenda ipsa illo accusamus quisquam, pariatur distinctio voluptates voluptatibus</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt saepe vel libero dignissimos nam eum <br>perferendis, mollitia, autem similique veritatis reiciendis laboriosam repudiandae blanditiis excepturi id </p>
+                        <h4>Read More >></h4>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="book">
+                        <img src="imgs/blog2.jpg">
+
+                    </div>
+                    <div class="blog">
+                        <h3>Explicabo illo</h3>
+                        <h6>By: Admin</h6>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eum eos nisi quia recusandae! Eveniet repudiandae<br> praesentium esse, rerum sunt autem fugiat vero doloribus quia ab consequuntur temporibus
+                        Lorem ipsum dolor<br> sit amet consectetur, adipisicing elit. Reiciendis sint doloremque quo ipsa nemo, doloribus est distinctio rerum<br> omnis aspernatur tempore similique assumenda? Voluptas assumenda quas, laboriosam incidunt perspiciatis fuga? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam iusto corrupti aut, ipsum exercitationem pariatur debitis distinctio officia tempore. Molestiae rerum ab assumenda quae rem voluptates nobis, consequuntur quidem dicta. </p>
+                        <h4>Read More >></h4>
+                    </div>
+
+                </div>
+                <div class="news">
+                    <div class="book">
+                        <img src="imgs/blog3.jpg">
+
+                    </div>
+                    <div class="blog">
+                        <h3>Porro Quisqua</h3>
+                        <h6>By: Admin</h6>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eum eos nisi quia recusandae! Eveniet repudiandae<br> praesentium esse, rerum sunt autem fugiat vero doloribus quia ab consequuntur temporibus
+                            Lorem ipsum dolor<br> sit amet consectetur, adipisicing elit. Reiciendis sint doloremque quo ipsa nemo, doloribus est distinctio rerum<br> omnis aspernatur tempore similique assumenda? Voluptas assumenda quas, laboriosam incidunt perspiciatis fuga? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis consectetur voluptas delectus hic cupiditate nulla eos possimus deleniti similique, eaque expedita quis cum quos distinctio illo numquam accusamus iusto nemo. </p>
+                        <h4>Read More >></h4>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
